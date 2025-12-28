@@ -1,0 +1,5 @@
+extern NSNotificationName const FileBrowserWillDeleteNotification;
+extern NSString* const FileBrowserPathKey;
+
+extern NSNotificationName const FileBrowserDidDuplicateNotification;
+extern NSString* const FileBrowserURLDictionaryKey;

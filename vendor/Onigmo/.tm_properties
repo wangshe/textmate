@@ -1,0 +1,3 @@
+[ source.c ]
+tabSize  = 8
+softTabs = true

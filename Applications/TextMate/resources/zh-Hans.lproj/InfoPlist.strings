@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+NSHumanReadableCopyright = "© MacroMates Ltd., 2004-${YEAR}";
+"CFBundleDisplayName" = "文本编辑";
+"CFBundleName" = "文本编辑";
