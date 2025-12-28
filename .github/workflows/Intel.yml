@@ -1,0 +1,26 @@
+name: 编译Intel
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: macOS-15-intel
+
+    steps:
+    - name: 准备开始
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: 设置环境
+      run: brew install boost capnp google-sparsehash multimarkdown ninja ragel
+    - name: 装载配置
+      run: ./configure
+    - name: 开始编译
+      run: ninja TextMate
+    - name: 上传结果
+      uses: actions/upload-artifact@main
+      with:
+        name: textmate
+        path: /Users/runner/build/textmate/release/Applications/TextMate
