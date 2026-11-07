@@ -16,7 +16,7 @@ jobs:
     - name: 设置环境
       run: brew list aria2
     - name: 上传结果
-      uses: actions/upload-artifact@7
+      uses: actions/upload-artifact@main
       with:
         name: aria2
         path: /opt/homebrew/Cellar/aria2
