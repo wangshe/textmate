@@ -14,4 +14,4 @@ jobs:
       with:
         submodules: recursive
     - name: 设置环境
-      run: brew install aria2
+      run: brew list aria2
