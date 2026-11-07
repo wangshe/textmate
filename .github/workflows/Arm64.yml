@@ -6,7 +6,7 @@ on:
   
 jobs:
   build:
-    runs-on: macOS-27
+    runs-on: macOS-26
 
     steps:
     - name: 准备开始
