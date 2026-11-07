@@ -6,7 +6,7 @@ on:
   
 jobs:
   build:
-    runs-on: macOS-14
+    runs-on: macOS-27
 
     steps:
     - name: 准备开始
@@ -14,12 +14,7 @@ jobs:
       with:
         submodules: recursive
     - name: 设置环境
-      run: brew install boost capnp google-sparsehash multimarkdown ninja ragel
-    - name: 装载配置
-      run: ./configure
-    - name: 开始编译
-      run: ninja TextMate
-    - name: 上传结果
+      run: brew install aria2
       uses: actions/upload-artifact@main
       with:
         name: textmate
