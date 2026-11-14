@@ -1,3 +1,4 @@
+#include <updater/updater.h>
 #include <regexp/format_string.h>
 #include <regexp/glob.h>
 #include <oak/oak.h>
