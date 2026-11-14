@@ -6,7 +6,7 @@ on:
   
 jobs:
   build:
-    runs-on: macOS-15
+    runs-on: macOS-26
 
     steps:
     - name: 准备开始
@@ -14,9 +14,9 @@ jobs:
       with:
         submodules: recursive
     - name: 安装依赖
-      run: brew install libplist libimobiledevice libusbmuxd boost capnp google-sparsehash multimarkdown ninja ragel
+      run: brew install libplist boost capnp google-sparsehash multimarkdown ninja ragel
     - name: 设置环境
-      run: export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/Cellar/libplist/2.6.0/lib:/opt/homebrew/Cellar/libimobiledevice/1.3.0_3/lib:/opt/homebrew/Cellar/libusbmuxd/2.1.0/lib
+      run: export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/Cellar/libplist/2.8.0/lib
     - name: 装载配置
       run: ./configure
     - name: 开始编译
