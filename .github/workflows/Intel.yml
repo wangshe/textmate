@@ -1,4 +1,4 @@
-name: 编译Intel
+name: 编译
 
 on:
   repository_dispatch:
@@ -6,7 +6,7 @@ on:
   
 jobs:
   build:
-    runs-on: macOS-15-intel
+    runs-on: macOS-26
 
     steps:
     - name: 准备开始
