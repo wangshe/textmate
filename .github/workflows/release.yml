@@ -18,7 +18,7 @@ jobs:
     - name: 装载配置
       run: ./configure
     - name: 开始编译
-      run: ninja TextMate -dead_strip_dylibs
+      run: ninja TextMate -L${HOME}/.nix-profile/sdk/${arm64}/lib
     - name: 上传结果
       uses: actions/upload-artifact@main
       with:
